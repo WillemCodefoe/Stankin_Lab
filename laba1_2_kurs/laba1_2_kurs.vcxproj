@@ -132,6 +132,9 @@
   <ItemGroup>
     <Text Include="text.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\OneDrive\Рабочий стол\отчет АхмадуллинАндрей АДБ-22-6.pdf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
