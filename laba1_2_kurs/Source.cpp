@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
+#include <fstream>
+#include <string>
 using namespace std;
 
 class Student
@@ -109,11 +111,24 @@ void GetSlice(vector <Student>& a)
 
 int main() {
     setlocale(LC_ALL, "RU");
-    vector<Student> students = { {"иванов", 30}, {"петров", 40}, {"попов", 35}, {"кузнецов", 50}, {"рутов", 45} };
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    shellSort(students, students.size());
 
+    vector<Student> students;
+
+    ifstream file("text.txt"); // открываем файл
+    if (file.is_open()) { // проверяем, что файл успешно открыт
+        std::string str;
+        int num;
+        while (file >> str >> num) { // считываем строки и числа из файла
+            students.push_back({ str, num }); // выводим считанные данные на экран
+        }
+        file.close(); // не забываем закрыть файл после использования
+    }
+    else {
+        cout << "Ошибка чтения файла" << endl; // сообщаем об ошибке, если файл не удалось открыть
+    }
+    shellSort(students, students.size());
     GetSlice(students);
 
     for (const auto& student : students) {
@@ -130,3 +145,4 @@ int main() {
 
     return 0;
 }
+
