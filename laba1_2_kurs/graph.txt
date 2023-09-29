@@ -1,0 +1,14 @@
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+x = [100000, 500000, 1000000, 1500000, 2000000, 3000000]
+y = [9, 2 , 7 , 3, 6, 8]
+
+plt.plot(x, y, 'b', label='line one', linewidth=1)
+
+plt.title('Графическое представление данных:')
+plt.ylabel('Время исполнения (мс)')
+plt.xlabel('Количество элементов')
+
+plt.show()

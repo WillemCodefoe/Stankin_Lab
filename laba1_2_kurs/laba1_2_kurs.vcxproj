@@ -130,6 +130,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="graph.txt" />
     <Text Include="text.txt" />
   </ItemGroup>
   <ItemGroup>

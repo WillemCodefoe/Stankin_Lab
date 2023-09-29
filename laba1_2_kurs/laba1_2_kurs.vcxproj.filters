@@ -23,6 +23,9 @@
     <Text Include="text.txt">
       <Filter>Исходные файлы</Filter>
     </Text>
+    <Text Include="graph.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\OneDrive\Рабочий стол\отчет АхмадуллинАндрей АДБ-22-6.pdf">
